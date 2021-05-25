@@ -3,7 +3,6 @@ package kodlamaio.hrms2.entities.concretes;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 //anotasyonları projeye inlude ediyoruz

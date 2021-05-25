@@ -12,17 +12,25 @@ import java.util.List;
 @Service
 public class JobTitleManager implements JobTitleService {
 
-    //data access injection
+    //injection
     private JobTitleDao jobTitleDao;
 
-    @Autowired
-    public JobTitleManager(JobTitleDao jobTitleDao){
+
+    @Autowired //bizim yerimize new liyor. Çok önemli
+    public JobTitleManager(JobTitleDao jobTitleDao) { //constructor
         super();
         this.jobTitleDao = jobTitleDao;
     }
 
+
+
     @Override
     public List<jobTitle> getAll() {
-        return null;
+        //Dao çağır findAll() //jparepostiory'de gelir.
+
+        return jobTitleDao.findAll();
     }
+
+
 }
+// Business Database'e git findAll() çalıştır.
