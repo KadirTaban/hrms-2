@@ -8,7 +8,6 @@ import java.util.Date;
 import java.util.NavigableMap;
 
 @Entity
-@PrimaryKeyJoinColumn(name = "id")
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "candidates")
