@@ -7,19 +7,25 @@ import javax.persistence.*;
 
 //anotasyonları projeye inlude ediyoruz
 @Data//getter setter
-@Entity//veritabanı nesenesi
+@Entity//veritabanı nesnesi
 @Table(name = "job_titles") //veritabanı tablo karsilik
 @NoArgsConstructor//parametre olmadan çalışan constructor
-@AllArgsConstructor// parametre olarak çalısan constructor
 
 public class jobTitle {
 
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)//Primary key üretme türünü atıyoruz.
-    @Column(name="id")
-    private int id;
+    private Integer id;
 
-    @Column(name = "title")
+
+
+    @Column(name = "title",nullable = false)
     private String title;
+
+    public jobTitle(String title){
+        this.title=title;
+    }
+
 }
