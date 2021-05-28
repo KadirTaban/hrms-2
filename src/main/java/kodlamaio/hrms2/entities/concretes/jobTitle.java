@@ -24,7 +24,7 @@ public class jobTitle {
     @Column(name = "title",nullable = false)
     private String title;
 
-    public jobTitle(String title){
+    public jobTitle(int id, String title){
         this.title=title;
     }
 

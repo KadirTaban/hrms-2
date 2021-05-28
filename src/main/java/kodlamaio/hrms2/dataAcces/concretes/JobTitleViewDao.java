@@ -6,7 +6,7 @@ import lombok.Getter;
 import java.io.Serializable;
 
 @Getter
-public class JobTitleViewDao implements Serializable {
+public class JobTitleViewDao extends JobTitleUpdateDao implements Serializable {
     private static final long serialVersionUID = 1l;
 
     private final int id;
