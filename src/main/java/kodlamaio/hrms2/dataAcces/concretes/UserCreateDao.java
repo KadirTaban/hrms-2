@@ -9,5 +9,7 @@ public class UserCreateDao {
     private String firstName;
     private String lastName;
     private String nationalIdentity;
+    private String eMail;
+    private String password;
 
 }

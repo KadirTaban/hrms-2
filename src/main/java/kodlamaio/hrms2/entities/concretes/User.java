@@ -26,10 +26,17 @@ public class User {
    @Column(name = "nationalIdentity",nullable = false,length = 11)
    private String nationalIdentity;
 
-   public User(int id, String firstName, String lastName, String nationalIdentity) {
+   @Column(name = "eMail",nullable = false,unique = true)
+   private String eMail;
+
+   @Column(name = "password",nullable = false,length = 6,columnDefinition = "Şifre 6 karakterden uzun olmak zorundadır.")
+   private String password;
+   public User(int id, String firstName, String lastName, String nationalIdentity,String eMail,String password) {
       this.id=id;
       this.firstName=firstName;
       this.lastName=lastName;
       this.nationalIdentity=nationalIdentity;
+      this.eMail=eMail;
+      this.password=password;
    }
 }

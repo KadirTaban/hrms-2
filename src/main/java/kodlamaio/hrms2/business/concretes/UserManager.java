@@ -43,7 +43,7 @@ public class UserManager implements UserService {
     @Transactional
 
     public UserViewDao createUser(UserCreateDao userCreateDao)throws NotFoundException{
-        final User user = userDao.save(new User(userCreateDao.getId(),userCreateDao.getFirstName(),userCreateDao.getLastName(),userCreateDao.getNationalIdentity()));
+        final User user = userDao.save(new User(userCreateDao.getId(),userCreateDao.getFirstName(),userCreateDao.getLastName(),userCreateDao.getNationalIdentity(),userCreateDao.getEMail(),userCreateDao.getPassword()));
         return UserViewDao.of(user);
     }
 }
